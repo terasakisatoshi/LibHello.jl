@@ -22,9 +22,9 @@ jobs:
         with:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
-      #- name: Install-libhello_jll
-      #  - run: julia --project=@. -e 'using Pkg; Pkg.add(url="https://github.com/terasakisatoshi/libhello_jll.jl.git", rev="libhello-v0.1.0+0")'
+      - name: Install-libhello_jll
+        run: julia --project=@. -e 'using Pkg; Pkg.add(url="https://github.com/terasakisatoshi/libhello_jll.jl.git", rev="libhello-v0.1.0+0")'
       - name: Install CxxWrap.jl
-        - run: julia --project=@. -e 'using Pkg; Pkg.add("CxxWrap")'
+        run: julia --project=@. -e 'using Pkg; Pkg.add("CxxWrap")'
       #- uses: julia-actions/julia-buildpkg@latest
       - uses: julia-actions/julia-runtest@latest
