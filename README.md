@@ -6,19 +6,21 @@ Test out [`libhello_jll`](https://github.com/terasakisatoshi/libhello_jll.jl) ge
 
 ## Install dependencies
 
-- Install [`libhello_jll`](https://github.com/terasakisatoshi/libhello_jll.jl) via 
+- Install [`libhello_jll`](https://github.com/terasakisatoshi/libhello_jll.jl) via:
 
 ```console
 $ julia --project=@. -e 'using Pkg; Pkg.add(url="https://github.com/terasakisatoshi/libhello_jll.jl.git", rev="libhello-v0.1.0+0")'
 ```
 
-- Install `CxxWrap.jl` via
+- Install `CxxWrap.jl` via:
 
 ```console
 $ julia --project=@. -e 'using Pkg; Pkg.add("CxxWrap")'
 ```
 
 # Test out 
+
+- Run `Pkg.test()`:
 
 ```console
 $ julia --project=@. -e 'using Pkg; Pkg.test()'
