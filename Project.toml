@@ -1,6 +1,14 @@
 name = "LibHello"
+uuid = "143cafd5-5636-4c04-a0ba-d9dda9b28aee"
+authors = ["Satoshi Terasaki <terasakisatoshi.math@gmail.com>"]
 version = "0.1.0"
 
 [deps]
 CxxWrap = "1f15a43c-97ca-5a2a-ae31-89f07a497df4"
 libhello_jll = "3939d790-347f-5599-b9e1-f2daa7662b6b"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
