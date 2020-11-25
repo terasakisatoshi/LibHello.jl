@@ -13,13 +13,21 @@ This repository will test out [`libhello_jll`](https://github.com/terasakisatosh
 - Install [`libhello_jll`](https://github.com/terasakisatoshi/libhello_jll.jl) via:
 
 ```console
-$ julia -e 'using Pkg; Pkg.add(url="https://github.com/terasakisatoshi/libhello_jll.jl.git", rev="libhello-v0.2.0+0")'
+$ julia --project=@. -e 'using Pkg; Pkg.add(url="https://github.com/terasakisatoshi/libhello_jll.jl.git", rev="libhello-v0.2.0+0")'
 ```
 
 - Install `CxxWrap.jl` via:
 
 ```console
 $ julia --project=@. -e 'using Pkg; Pkg.add("CxxWrap")'
+```
+
+### Optional (For `armv7l` users e.g. RaspberryPi)
+
+- You can try this Julia Application on your RaspberryPi4 with arm32bit system. Note that, you'll need install `libcxxwrap_julia_jll` its version is `v0.8.2`.
+
+```julia
+$ julia --project=@. -e 'using Pkg; Pkg.add(PackageSpec(name="libcxxwrap_julia_jll", rev="b5edd5de8ab5b80e8f945bf1829048ef7a4feee0"))'
 ```
 
 # Test out
